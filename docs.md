@@ -413,7 +413,7 @@ route.delete('/:id', deleteUser);
 
 3. Go to `Settings` and `Reveal Config Vars`
    1. DATABASE_URL has been prepopulated with the production postgres db connection string
-   2. Add `DB_ENV` : `production` as a config var
+   2. Add `DB_ENV=production` as a config var
    3. Optional: I need to add a `PGSSLMODE=no-verify` env var for the ssl cert
 
 &nbsp;
@@ -437,4 +437,4 @@ route.delete('/:id', deleteUser);
 &nbsp;
 
 8. Confirm all endpoints are working as intended via `postman`
-    1. When using the heroku api `{{appname}}.herokuapp.com` you are hitting the production database
+   1. When using the heroku api `{{appname}}.herokuapp.com` you are hitting the production database
