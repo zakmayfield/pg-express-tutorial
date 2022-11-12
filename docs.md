@@ -424,7 +424,7 @@ route.delete('/:id', deleteUser);
 
 5. Run command: `knex migrate:latest`
    1. If command `knex` cant be found then be sure to push your changes to github, the app probably doesn't have `knex` in the package.json
-   2. If another error throws i would recommend using the PGSSLMODE env var to by pass
+   2. If another error throws i would recommend using the `PGSSLMODE=no-verify` env var to by pass
 
 &nbsp;
 
