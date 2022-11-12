@@ -410,10 +410,27 @@ route.delete('/:id', deleteUser);
 3. Go to `Settings` and `Reveal Config Vars`
    1. DATABASE_URL has been prepopulated with the postgres db connection string
    2. Add `DB_ENV` : `production` as a config var
-   3. Optional: I need to add a `PGSSLMODE=no-verify` env var for the ssl cert 
-
+   3. Optional: I need to add a `PGSSLMODE=no-verify` env var for the ssl cert
 
 &nbsp;
 
 4. Click on `More` and `Run Console`
+
+&nbsp;
+
 5. Run command: `knex migrate:latest`
+   1. If command `knex` cant be found then be sure to push your changes to github, the app probably doesn't have `knex` in the package.json
+   2. If another error throws i would recommend using the PGSSLMODE env var to by pass
+
+&nbsp;
+
+6. Run command: `knex seed:run`
+
+&nbsp;
+
+7. Open heroku app and hit the endpoints by appending `/api/users` to the url
+
+&nbsp;
+
+8. Confirm all endpoints are working as intended via `postman`
+    1. When using the heroku api `{{appname}}.herokuapp.com` you are hitting the production database
