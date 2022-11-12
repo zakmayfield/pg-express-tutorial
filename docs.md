@@ -375,6 +375,8 @@ route.put('/:id', updateUser);
 const deleteUser = async (req, res) => {
   const { id } = req.params;
   let user = await db('users').where('id', id).first();
+
+  // error handling
   await db('users').where('id', id).del();
   res.status(200).json(user);
 };
