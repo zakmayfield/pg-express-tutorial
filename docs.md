@@ -264,7 +264,7 @@ route.use('/users', require('../routes/users/userRoutes'));
 ```
 
 - `/users` is now a context route of `/api`
-  - This means you can only access the users route via `/api/users`
+  - This means you can only access the users endpoint via `/api/users`
 
 &nbsp;
 
