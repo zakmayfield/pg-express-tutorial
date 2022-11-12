@@ -277,6 +277,8 @@ const db = require('../db/dbConfig');
 
 const getUsers = async (req, res) => {
   let users = await db('users');
+
+  // error handling
   res.status(200).json(users);
 };
 
