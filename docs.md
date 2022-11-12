@@ -438,3 +438,5 @@ route.delete('/:id', deleteUser);
 
 8. Confirm all endpoints are working as intended via `postman`
    1. When using the heroku api `{{appname}}.herokuapp.com` you are hitting the production database
+
+# Congrats 🎉
